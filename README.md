@@ -1,5 +1,11 @@
-# tinyserver
-A C++ framework to create a MVC web application, meant for tiny servers (like Raspberry Pi Zero).
+# twebix
+A set small-footprint applications to implement a fully functional server in a low footprint device (such as a Raspberry Pi Zero).
+
+Tools:
+
+* libtwebix: include the basis to create all twebix applications. Include functions to read/write configuration files (in Lua), interpret JSON, call REST, etc.
+* twhttps: convert https requests to http
+* 
 
 Modules:
 
