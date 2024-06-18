@@ -3,18 +3,20 @@ A set small-footprint applications to implement a fully functional server in a l
 
 Tools:
 
-* libtwebix: include the basis to create all twebix applications. Include functions to read/write configuration files (in Lua), interpret JSON, call REST, etc.
-* twhttps: convert https requests to http
-* 
+Libraries:
 
-Modules:
+* libtwebix: include the basis to create all twebix applications.
+  * include functions to read/write configuration files (in Lua), interpret JSON, call REST, etc.
+  * make a HTTP interface available to check for memory usage, CPU usage, etc
+* libtwapp: Spring-like library, used to create web apps
 
-- Load balancer
-  - HTTPS to HTTP offloader
-  - Redirection (target groups)
-  - Health checks and scaling
-- Static web server
-- REST web server
-  - REST support: HTTP controller + JSON parser
-  - MVC architecture (Spring-like)
-  - Hibernate-like (SQLite)
+Basic infrastructure:
+
+* tw-https: convert https requests to http
+* tw-redirect: redirect http requests based on path, parameters, headers
+* tw-loadbalancer: perform load balancing and health checks
+
+Full-fledged applications:
+
+* tw-webstatic: serve static HTTP content
+* tw-health: information about server health
